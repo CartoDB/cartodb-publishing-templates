@@ -74,7 +74,7 @@
       <div class="col span2 empty"><p></p></div>
     </div>
 
-    <!--Play fair and keep the attributions. If you do, we will love you even more. :)-->
+    <!--Play fair and keep the attributions. If you do so, we will love you even more. :)-->
     <div class="row">
       <div class="col span2 empty"><p></p></div>
       <div class="col span12 context footer">
@@ -83,8 +83,9 @@
       <div class="col span2 empty"><p></p></div>
     </div>
 
-    <!--Change the URL below in order to change the map that is being shown.
-        Go to your map in CartoDB, click on share, and copy the URL under the API section
+    <!--Change the URL's below in order to change the maps that are being shown.
+        map1 is the one on the left side and map2 is the one on the right side.
+        Go to your map view in CartoDB, click on share, and copy the URL under the API section
         Check the cartodb.js documentation for more info
         http://developers.cartodb.com/documentation/cartodb-js.html-->
     <script type="text/javascript">
@@ -97,10 +98,10 @@
         .done(function(vis, layers) {
             map2 = vis.getNativeMap();
             map1.on('moveend', function(e) {
-              changeMapState(map1, map2)
+              changeMapState(map1, map2);
             });
             map2.on('moveend', function(e) {
-              changeMapState(map2, map1)
+              changeMapState(map2, map1);
             });
         })
       })
