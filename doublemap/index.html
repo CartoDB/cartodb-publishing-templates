@@ -93,14 +93,14 @@
 
       cartodb.createVis('map1', 'http://examples.cartodb.com/api/v1/viz/23320/viz.json')
       .done(function(vis, layers) {
-        map1 = vis.getNativeMap();        
+        map1 = vis.mapView.map;
         cartodb.createVis('map2', 'http://examples.cartodb.com/api/v1/viz/15590/viz.json')
         .done(function(vis, layers) {
-            map2 = vis.getNativeMap();
-            map1.on('moveend', function(e) {
+            map2 = vis.mapView.map;
+            map1.on('change:zoom change:center', function(e) {
               changeMapState(map1, map2);
             });
-            map2.on('moveend', function(e) {
+            map2.on('change:zoom change:center', function(e) {
               changeMapState(map2, map1);
             });
         })
@@ -108,7 +108,10 @@
 
       //Applies the same view from src to tgt map
       function changeMapState(src,tgt){
-        tgt.setView(src.getCenter(), src.getZoom());
+        tgt.set({
+            'center': src.get('center'),
+            'zoom': src.get('zoom')
+        });
       }
 
     </script>
