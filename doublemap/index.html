@@ -93,10 +93,10 @@
     <script type="text/javascript">
       var map1,map2;
 
-      cartodb.createVis('map1', 'http://examples.cartodb.com/api/v1/viz/23320/viz.json')
+      cartodb.createVis('map1', 'http://osm2.cartodb.com/api/v1/viz/2666/viz.json')
       .done(function(vis, layers) {
         map1 = vis.mapView.map;
-        cartodb.createVis('map2', 'http://examples.cartodb.com/api/v1/viz/15590/viz.json')
+        cartodb.createVis('map2', 'http://osm2.cartodb.com/api/v1/viz/2670/viz.json')
         .done(function(vis, layers) {
             map2 = vis.mapView.map;
             map1.on('change:zoom change:center', function(e) {
