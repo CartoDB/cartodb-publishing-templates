@@ -30,8 +30,8 @@
     <div class="row">
       <div class="col span2 empty"><p></p></div>
       <div class="col span12">
-        <h1>Title of your visualization</h1>
-        <p>An earthquake of magnitude 9.0 occurred March 11, 2012, off the northeastern Pacific coast of Japan. The earthquake was followed by a tsunami which would reach 9.3m or higher at Fukushima Prefecture. <a href=''>Combined, the two claimed almost</a> 20,000 lives in the region of Tohoku and triggered nuclear meltdowns at three reactors in Fukushima nuclear plant.</p>
+        <h1>Barcelona traffic at two different times</h1>
+        <p>The double panel map is perfect for comparing datasets collected at different times. Here, we are showing the traffic congestion in Barcelona during the <a href=''>Mobile World Conference</a> and then the traffic one week later.</p>
       </div>
       <div class="col span2 empty"><p></p></div>
     </div>
@@ -52,7 +52,7 @@
     <div class="row">
       <div class="col span2 empty"><p></p></div>
       <div class="col span12">
-        <p>The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home. In a cosmic perspective, most human concerns seem insignificant, even petty. And yet our species is young and curious and brave and shows much promise. In the last few millennia we have made the most astonishing, unexpected discoveries about the Cosmos and our place within it, explorations that are exhilarating to consider. They remind us that humans have evolved to wonder, that understanding is a joy, that knowledge is prerequisite to survival. I believe our future depends powerfully on how well we understand this Cosmos in which we float like a mote of dust in the morning sky.</p>
+        <p>The double panel is both useful for when you have obvious differences that you want to show immediately and for cases where you want to encourage the user to explore the map carefully to discover the differences. In the case above, it may not look different immediately, but if you were planning a drive during the MWC, you may want to look more carefully.</p>
       </div>
       <div class="col span2 empty"><p></p></div>
     </div>
@@ -68,7 +68,7 @@
     <div class="row">
       <div class="col span2 empty"><p></p></div>
       <div class="col span12">
-        <p>Unexpected discoveries about the <a href="#">Cosmos and our place</a> within it, explorations that are <a href="#">exhilarating</a> to consider. They remind us that humans have evolved to wonder, that understanding is a joy, that knowledge is prerequisite to survival. I believe our future depends powerfully on how well we understand this.</p>
+        <p>We hope you enjoy <a href="#">our templates</a> and we will continue creating new ones as much as we can!</p>
       </div>
       <div class="col span2 empty"><p></p></div>
     </div>
@@ -93,10 +93,10 @@
     <script type="text/javascript">
       var map1,map2;
 
-      cartodb.createVis('map1', 'http://osm2.cartodb.com/api/v1/viz/2666/viz.json')
+      cartodb.createVis('map1', 'http://osm2.cartodb.com/api/v1/viz/2670/viz.json')
       .done(function(vis, layers) {
         map1 = vis.mapView.map;
-        cartodb.createVis('map2', 'http://osm2.cartodb.com/api/v1/viz/2670/viz.json')
+        cartodb.createVis('map2', 'http://osm2.cartodb.com/api/v1/viz/2666/viz.json')
         .done(function(vis, layers) {
             map2 = vis.mapView.map;
             map1.on('change:zoom change:center', function(e) {
